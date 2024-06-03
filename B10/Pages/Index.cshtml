@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Pocetna strana";
+}
+
+<div class="telo">
+    <form method="post">
+        <label class="control-label" asp-for="Smer">Smer:</label>
+        <select asp-for="Smer">
+            <option>Selektuj smer prevodjenja</option>
+            <option value="0">Engleski -> Srpski</option>
+            <option value="1">Srpski -> Engleski</option>
+        </select>
+        <br />
+        <br />
+
+    </form>
+</div>
