@@ -1,4 +1,21 @@
 ﻿@page
 @model B10.Pages.Stranice.DodavanjeNovihReciModel
 @{
+    ViewData["Title"] = "Dodavanje novih reci";
 }
+
+<form method="post">
+    <label class="control-label" asp-for="EngleskaRec">Engleska reč:</label>
+    <input type="text" asp-for="EngleskaRec" />
+    <br />
+    <br />
+    <label class="control-label" asp-for="SrpskaRec">Srpska reč:</label>
+    <input type="text" asp-for="SrpskaRec" />
+    <br />
+    <br />
+    <label class="control-label" asp-for="OpisReci">Opis:</label>
+    <input style="width: 300px; height:100px;" type="text" asp-for="OpisReci" />
+    <br />
+    <br />
+    <button type="submit">Snimi</button>
+</form>

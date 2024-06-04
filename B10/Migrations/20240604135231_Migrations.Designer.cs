@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace B10.Migrations
 {
     [DbContext(typeof(RecnikDbContext))]
-    [Migration("20240603204557_Migrations")]
+    [Migration("20240604135231_Migrations")]
     partial class Migrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

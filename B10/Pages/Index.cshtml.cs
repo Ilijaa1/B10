@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using B10.Model;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace B10.Pages
@@ -33,6 +34,31 @@ namespace B10.Pages
         public void OnGet()
         {
 
+        }
+
+        public void OnPost()
+        {
+            Prevod prevod = null;
+
+            if (Smer == "0")
+            {
+                prevod = _recnikService.PrevediEngleski(Engleski);
+            }
+
+            if (Smer == "1")
+            {
+                prevod = _recnikService.PrevediSrpski(Srpski);
+            }
+
+            if (prevod != null)
+            {
+                srp = prevod.Srpski;
+                eng = prevod.Engleski;
+                opis = prevod.Opis;
+
+
+                RedirectToPage("/Index");
+            }
         }
     }
 }
